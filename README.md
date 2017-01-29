@@ -15,7 +15,7 @@ Y entonces ejecuta
 
     $ bundle
 
-o instalaló a través de consola con:
+o instalalo a través de consola con:
 
     $ gem install senado_chile
 
@@ -30,6 +30,7 @@ Métodos disponibles
 - SenadoChile.senadores: Obtiene todos los senadores
 - SenadoChile.tramitaciones: Obtiene los trámites por dd/mm/yyyy. Por defecto busca en el día actual
 
+Aún se encuentra en contrucción, si quieres proponer algún método específico no dudes en crearlo en [Nuestras Issue](https://github.com/nelyj/senado_chile/issues)
 
 ## Contribución
 
