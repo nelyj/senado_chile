@@ -11,8 +11,7 @@ module SenadoChile
 
   def periodos_legislativos
     reponse = HTTParty.get('http://opendata.congreso.cl/wscamaradiputados.asmx/getPeriodosLegislativos')
-    binding.pry
-    reponse.parsed_response
+    reponse.parsed_response['PeriodosLegislativo']['PeriodoLegislativo'].string_to_symbol
   end
   module_function :periodos_legislativos
 
