@@ -5,34 +5,35 @@ Obten información del Senado de Chile como tramitaciones, senadores, leyes, vot
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Agregar esta linea en tu Gemfile:
 
 ```ruby
 gem 'senado_chile'
 ```
 
-And then execute:
+Y entonces ejecuta
 
     $ bundle
 
-Or install it yourself as:
+o instalaló a través de consola con:
 
     $ gem install senado_chile
 
-## Usage
+## USO
 
-TODO: Write usage instructions here
+Métodos disponibles
 
-## Development
+- SenadoChile.buscar('Gabriel'): Puedes buscar por coincidencia por defecto es nombre y diputado. (Esto puede ser otro atributo del json y otro objeto como senador)
+- SenadoChile.diputados: Obtiene todos los diputados
+- SenadoChile.periodo_actual: Obtiene el periodo legislativo actual
+- SenadoChile.periodos_legislativos: Obtien los periodos legislativos
+- SenadoChile.senadores: Obtiene todos los senadores
+- SenadoChile.tramitaciones: Obtiene los trámites por dd/mm/yyyy. Por defecto busca en el día actual
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+## Contribución
 
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/senado_chile. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
+Reporte de bugs y pull requests son bienvenidos en GitHub at https://github.com/nelyj/senado_chile. Este es un proyecto que busca ser un espacio seguro y acogedor a las contribuciones, sean bienvenidos a colaborar y se espera que los contribuyentes se adhieran al código de conducta de [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
