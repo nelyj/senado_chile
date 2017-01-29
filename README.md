@@ -24,6 +24,7 @@ o instalalo a través de consola con:
 Métodos disponibles
 
 - SenadoChile.buscar('Gabriel'): Puedes buscar por coincidencia por defecto es nombre y diputado. (Esto puede ser otro atributo del json y otro objeto como senador)
+- SenadoChile.buscar('Boric','apellido_paterno'): Puedes buscar por otros atributos que entrega el json, por ejemplo: apellido_paterno
 - SenadoChile.diputados: Obtiene todos los diputados
 - SenadoChile.periodo_actual: Obtiene el periodo legislativo actual
 - SenadoChile.periodos_legislativos: Obtien los periodos legislativos

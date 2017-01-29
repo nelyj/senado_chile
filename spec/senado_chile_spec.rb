@@ -11,6 +11,11 @@ describe SenadoChile do
       response = SenadoChile.buscar('ab')
       expect(response.first[:nombre]).to include('ab')
     end
+
+    it 'return a diputado with apellido_paterno Boric' do
+      response = SenadoChile.buscar('Boric','apellido_paterno')
+      expect(response.first[:apellido_paterno]).to include('Boric')
+    end
   end
 
   describe '#diputados' do
