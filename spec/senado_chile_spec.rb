@@ -6,6 +6,21 @@ describe SenadoChile do
     expect(SenadoChile::VERSION).not_to be nil
   end
 
+  describe '#diputados' do
+    before(:each) do
+      @diputados = SenadoChile.diputados
+    end
+
+    it 'return an Array data type' do
+      expect(@diputados.class).to be Array
+    end
+
+    it 'return first object with dipid' do
+      diputado = @diputados.first.keys
+      expect(diputado.first).to eq(:dipid)
+    end
+  end
+
   describe '#senadores' do
     before(:each) do
       @senadores = SenadoChile.senadores
@@ -13,6 +28,11 @@ describe SenadoChile do
 
     it 'return a Hash data type' do
       expect(@senadores.class).to be Array
+    end
+
+    it 'return first object with parlaid key' do
+      senador = @senadores.first.keys
+      expect(senador.first).to eq(:parlid)
     end
   end
 
@@ -23,6 +43,11 @@ describe SenadoChile do
 
     it 'return a Hash data type' do
       expect(@tramitaciones.class).to be Array
+    end
+
+    it 'eturn first object with descripcion key' do
+      tramite = @tramitaciones.first.keys
+      expect(tramite.first).to eq(:descripcion)
     end
   end
 end
