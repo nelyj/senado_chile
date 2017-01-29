@@ -3,11 +3,25 @@ require 'httparty'
 require 'array'
 
 module SenadoChile
+
+  def buscar(value, attribute='nombre', object='diputados')
+    response = send(object)
+    founds = response.select{ |row| row[attribute.to_sym].include?(value) }
+  end
+  module_function :buscar
+
   def diputados
     response = HTTParty.get('http://opendata.congreso.cl/wscamaradiputados.asmx/getDiputados_Vigentes')
     response.parsed_response["Diputados"]["Diputado"].string_to_symbol
   end
   module_function :diputados
+
+  def periodo_actual
+    reponse = HTTParty.get('http://opendata.congreso.cl/wscamaradiputados.asmx/getPeriodosLegislativos')
+    current = reponse.parsed_response['PeriodosLegislativo']['PeriodoLegislativo'].string_to_symbol
+    current.last
+  end
+  module_function :periodo_actual
 
   def periodos_legislativos
     reponse = HTTParty.get('http://opendata.congreso.cl/wscamaradiputados.asmx/getPeriodosLegislativos')

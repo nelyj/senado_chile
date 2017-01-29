@@ -6,6 +6,13 @@ describe SenadoChile do
     expect(SenadoChile::VERSION).not_to be nil
   end
 
+  describe '#buscar' do
+    it 'return a diputado with name start coincidence ab' do
+      response = SenadoChile.buscar('ab')
+      expect(response.first[:nombre]).to include('ab')
+    end
+  end
+
   describe '#diputados' do
     before(:each) do
       @diputados = SenadoChile.diputados
