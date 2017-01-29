@@ -34,7 +34,7 @@ Aún se encuentra en contrucción, si quieres proponer algún método específic
 
 ## Contribución
 
-Reporte de bugs y pull requests son bienvenidos en GitHub at https://github.com/nelyj/senado_chile. Este es un proyecto que busca ser un espacio seguro y acogedor a las contribuciones, sean bienvenidos a colaborar y se espera que los contribuyentes se adhieran al código de conducta de [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Reporte de bugs y pull requests son bienvenidos en GitHub [Senado Chile](https://github.com/nelyj/senado_chile). Este es un proyecto que busca ser un espacio seguro y acogedor a las contribuciones, sean bienvenidos a colaborar y se espera que los contribuyentes se adhieran al código de conducta de [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
