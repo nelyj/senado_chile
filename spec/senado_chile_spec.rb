@@ -12,11 +12,7 @@ describe SenadoChile do
     end
 
     it 'return a Hash data type' do
-      expect(@senadores.class).to be Hash
-    end
-
-    it 'has a senadores object key' do
-      expect(@senadores.keys.first).to eq("senadores")
+      expect(@senadores.class).to be Array
     end
   end
 
@@ -26,11 +22,7 @@ describe SenadoChile do
     end
 
     it 'return a Hash data type' do
-      expect(@tramitaciones.class).to be Hash
-    end
-
-    it 'has a proyectos object key' do
-      expect(@tramitaciones.keys.first).to eq("proyectos")
+      expect(@tramitaciones.class).to be Array
     end
   end
 end

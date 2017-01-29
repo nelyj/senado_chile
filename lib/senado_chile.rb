@@ -4,13 +4,13 @@ require 'httparty'
 module SenadoChile
   def senadores
     response = HTTParty.get('http://www.senado.cl/wspublico/senadores_vigentes.php')
-    response.parsed_response
+    response.parsed_response["senadores"]["senador"]
   end
   module_function :senadores
 
   def tramitaciones(date=Time.now.strftime('%d/%m/%Y').to_s)
     response = HTTParty.get("http://www.senado.cl/wspublico/tramitacion.php?fecha=#{date}")
-    response.parsed_response
+    response.parsed_response["proyectos"]["proyecto"]
   end
   module_function :tramitaciones
 end
